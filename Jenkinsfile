@@ -1,21 +1,19 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('Build') {
       steps {
         echo 'this is to build the app'
         sh 'npm install'
       }
     }
-
-    stage('test') {
+    stage('Test') {
       steps {
         echo 'this is to test the app'
         sh 'npm test'
       }
     }
-
-    stage('package') {
+    stage('Package') {
       steps {
         echo 'this is to package the app'
         sh 'npm run package'
@@ -34,7 +32,7 @@ pipeline {
   }
   post {
     always {
-      echo 'pipeline completed...'
+      echo 'Hello There...This is my first pipeline through code...'
     }
 
   }
